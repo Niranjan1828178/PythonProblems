@@ -1,0 +1,9 @@
+1.find minimum number of peranthesis need to be added to validate th peranthesis string
+Example 1:
+Input: s = "())"
+Output: 1
+
+Example 2:
+Input: s = "((("
+Output: 3
+
