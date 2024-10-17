@@ -57,7 +57,16 @@ def draw_hallow_prymid(n):
 
 
 while True:
-    pet=int(input('enter \n1:hallow rectangle\n2:solid rectangle\n3:solid rightangled triangle\n4:solid left rightangled triangle\n5:solid prymid\n6:hallow prymid\n7:hallow rightangled triangle\n8:hallow left rightangled triangle\n9:exit\n: '))
+    print('1:hallow rectangle')
+    print('2:solid rectangle')
+    print('3:solid rightangled triangle')
+    print('4:solid left rightangled triangle')
+    print('5:solid prymid')
+    print('6:hallow prymid')
+    print('7:hallow rightangled triangle')
+    print('8:hallow left rightangled triangle')
+    print('9:exit')
+    pet=int(input('enter your choice: '))
     if pet==1:
         l,b=map(int,input('enter l,b for hallow rectangle : ').split(','))
         draw_hallow_rectangle(l,b)
