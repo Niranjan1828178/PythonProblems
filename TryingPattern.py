@@ -41,12 +41,36 @@
 # 32123
 # 32223
 # 33333
-n=3
-
-for i in range(n*2-1):
-    for j in range(n*2-1):
-        if i==0 or i==(n)*2-2 or j==0 or j==(n)*2-2:
-            print(3,end=' ')
+def draw(tn,n):
+    ind=n-tn
+    inc=tn
+    for i in range(n*2-1):
+        if i>=ind and i<ind+tn*2-1:
+            if n>9 and tn<=9:
+                print(tn,end='  ')
+            else:
+                print(tn,end=' ')
+        elif i<ind:
+            if n>9 and n-i<=9:
+                print(n-i,end='  ')
+            else:
+                print(n-i,end=' ')
         else:
-            print(' ',end=' ')
+            inc+=1
+            if n>9 and inc<=9:
+                print(inc,end='  ')
+            else:
+                print(inc,end=' ')
     print()
+
+def pattern(tn,n):
+    draw(tn,n)
+    if tn==1:
+        return
+    pattern(tn-1,n)
+    
+    draw(tn,n)
+
+n=int(input('n:'))
+
+pattern(n,n)
